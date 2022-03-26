@@ -47,7 +47,6 @@ $hargaBuku = $_POST['harga'];
 $diskon = $_POST['diskon'];
 $gambarBuku = $_POST['gambar_buku'];
 
-// update data ke database
 /**
  * mengupdate data ke database
  * 
@@ -55,6 +54,8 @@ $gambarBuku = $_POST['gambar_buku'];
  * id sebagai penentu dari 6 variabel yang akan di _update_ 
  * ke database.
  */
-mysqli_query($koneksi,"update rakbuku set nama_buku='$namaBuku', kategori_buku='$kategoriBuku',penerbit_buku='$penerbitBuku', harga='$hargaBuku',diskon='$diskon', gambar_buku='$gambarBuku' where id='$id'");
-// mengalihkan halaman kembali ke index.php
+mysqli_query($koneksi,"update rakbuku set nama_buku='$namaBuku', kategori_buku='$kategoriBuku',penerbit_buku='$penerbitBuku', harga=$hargaBuku, diskon=$diskon, gambar_buku='$gambarBuku' where '$id'");
+/**
+ * mengembalikan ke halaman awal
+ */
 header("Location:./findbook.php");

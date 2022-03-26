@@ -21,7 +21,7 @@ $id = $_GET['id_buku'];
  * menggunakan perintah mysqli_query dengan memerulkan 
  * 2 variabel yaitu query _delete_ dan koneksi ke databasenya. 
  */
-mysqli_query($koneksi, "delete from mahasiswa where id_buku='$id'");
+mysqli_query($koneksi, "delete from rakbuku where id_buku='$id'");
 /**
  * mengembalikan ke halaman awal
  */
